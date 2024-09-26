@@ -4,10 +4,12 @@
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
             //Example 1
 
             int j1;
-            Console.WriteLine("\n\n Одновимірний масив iArray");
+            Console.WriteLine("Example1:\n\n Одновимірний масив iArray");
             int[] iArray = new int[10];
 
             for (j1 = 0; j1 < 10; j1++) iArray[j1] = j1 * j1;
@@ -38,9 +40,9 @@
             { Console.Write(" " +jj); }
             Console.WriteLine("\n\n");
             Console.Write(" ");
-            Console.ReadKey();
 
             //Example2
+            Console.WriteLine("Example2:");
 
             int j2;
             string strValue;
@@ -54,9 +56,10 @@
 
             for (j2 = 0; j2 < 10; j2++)
             Console.WriteLine($"\n {j2} {iArray2[j2]}");
-            Console.ReadKey();
 
             //Example 3
+            Console.WriteLine("Example3:");
+
             int num1, num2;
             string str;
             double db1, db2;
@@ -84,7 +87,7 @@
             }
 
             Console.WriteLine("\n----------------------------------------------- --");
-            Console.WriteLine("\n Масиви типу int Масиви типу double");
+            Console.WriteLine("\n Масиви типу int               Масиви типу double");
             Console.WriteLine("\n----------------------------------------------- --");
             for (int j3 = 0; j3 < 10; j3++)
             {
@@ -94,22 +97,23 @@
                 Console.WriteLine("\n----------------------------------------------- ");
                 Console.WriteLine();
             }
-            Console.ReadKey();
 
             //Example 4
+            Console.WriteLine("Example4:");
+
             int j4;
             string strValue4;
             int[] iArray41 = new int[10];
             int[] iArray42 = new int[10];
-            StreamReader sRead = new StreamReader("d:\\dat.txt");
-            StreamWriter sWrite = new StreamWriter("d:\\res.txt");
+            StreamReader sRead = new StreamReader("C:/Users/svtko/OneDrive/Робочий стіл/Лр3.txt");
+            StreamWriter sWrite = new StreamWriter("C:/Users/svtko/OneDrive/Робочий стіл/Лр32.txt");
 
             for (j4 = 0; j4 < 10; j4++)
             {
                 strValue4 = sRead.ReadLine();
                 iArray41[j4] = Convert.ToInt32(strValue4);
                 iArray42[j4] = 10 * iArray41[j4];
-                strValue = string.Format("\n {0, 4:D} {1, 6:D} {2, 6:D}", j4, iArray41[j4], iArray42[j4]);
+                strValue4 = string.Format("\n {0, 4:D} {1, 6:D} {2, 6:D}", j4, iArray41[j4], iArray42[j4]);
                 Console.WriteLine(strValue4);
                 Console.WriteLine();
                 sWrite.WriteLine(iArray42[j4]);
@@ -117,9 +121,10 @@
 
             sRead.Close();
             sWrite.Close();
-            Console.ReadKey();
 
             //Example 5
+            Console.WriteLine("Example5:");
+
             int j5, num;
             string str5;
             string str51 = "Сума", str52 = "Сума";
@@ -153,7 +158,7 @@
             }
 
             Console.WriteLine("\n----------------------------------------------- -------------------");
-            Console.WriteLine("\n Масиви типу int Масиви типу double ");
+            Console.WriteLine("\n Масиви типу int                                Масиви типу double ");
             Console.WriteLine("\n----------------------------------------------- -------------------");
             for (j5 = 0; j5 < 15; j5++)
             {
@@ -167,22 +172,23 @@
             Console.WriteLine("\n {0} {2,10:F2} {3} {4,10:F2} {5,10:F2}", str53, sum1 / 15, sum2 / 15,
                               str54, sum3 / 15, sum4 / 15);
             Console.WriteLine();
-            Console.ReadKey();
 
             //Example 6
+            Console.WriteLine("Example6:");
+
             int j6, num6, sum6 = 0;
             Random rnd6 = new Random();
             int[] iArray6 = new int[10];
 
             for (j6 = 0; j6 < 10; j6++)
             {
-                iArray[j6] = rnd.Next(1, 101);
+                iArray6[j6] = rnd6.Next(1, 101);
             }
 
             for (j6 = 0; j6 < 10; j6++)
             {
-                num6 = Convert.ToInt32(iArray[j6] % 2);
-                if (num6 == 0) sum6 += iArray[j6];
+                num6 = Convert.ToInt32(iArray6[j6] % 2);
+                if (num6 == 0) sum6 += iArray6[j6];
             }
 
             foreach (int jj6 in iArray6)
@@ -194,9 +200,10 @@
             Console.WriteLine("\n Сума парних елементів = " + sum6);
             Console.WriteLine();
             Console.Write(" ");
-            Console.ReadKey();
 
             //Example 7
+            Console.WriteLine("Example7:");
+
             int j7, jnum7 = 0;
             Random rnd7= new Random();
             int[] iArray7 = new int[20];
@@ -232,9 +239,10 @@
             Console.WriteLine("\n iArray[" + j7 + "] = " + iArray7[j7]);
             Console.WriteLine();
             Console.Write(" ");
-            Console.ReadKey();
 
             //Example 8
+            Console.WriteLine("Example8:");
+
             int jnum8 = 0, N = 20;
             int jAA = 0, jBB = 0;
             int j8, k8, temp8;
@@ -328,7 +336,6 @@
                 Console.Write(" " + jj);
             }
             Console.WriteLine("\n\n");
-            Console.ReadKey();
 
         }
     }

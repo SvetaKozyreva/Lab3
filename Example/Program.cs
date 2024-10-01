@@ -105,8 +105,8 @@
             string strValue4;
             int[] iArray41 = new int[10];
             int[] iArray42 = new int[10];
-            StreamReader sRead = new StreamReader("C:/Users/svtko/OneDrive/Робочий стіл/Лр3.txt");
-            StreamWriter sWrite = new StreamWriter("C:/Users/svtko/OneDrive/Робочий стіл/Лр32.txt");
+            StreamReader sRead = new StreamReader("C:\\Users\\svtko\\OneDrive\\Робочий стіл\\Лаби\\ООП2\\Lab3\\Example\\Лр3R.txt");
+            StreamWriter sWrite = new StreamWriter("C:\\Users\\svtko\\OneDrive\\Робочий стіл\\Лаби\\ООП2\\Lab3\\Example\\Лр3W.txt");
 
             for (j4 = 0; j4 < 10; j4++)
             {
